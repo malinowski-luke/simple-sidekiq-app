@@ -14,6 +14,9 @@ bundle exec sidekiq -r ./job.rb
 
 ```bash
 bundle exec irb -r ./job.rb
+
+# This works can be set up with pry
+bin/console
 ```
 
 3. Run Job
