@@ -22,6 +22,14 @@ bundle exec irb -r ./job.rb
 MyJob.perform_async("Hello world")
 ```
 
+4. Run sidekiq Web UI
+
+defaults to [host](http://localhost:9292)
+
+```bash
+rackup
+```
+
 ## Gotcha to run WebUI
 
 Run in irb console
