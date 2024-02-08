@@ -1,4 +1,5 @@
 require "sidekiq"
+require "sidekiq/api"
 
 Sidekiq.configure_client do |config|
   config.redis = {db: 2}
@@ -16,7 +17,7 @@ end
 
 class HelloWorldJob < BaseJob
   def perform
-    sleep 5 
+    sleep 10  
     puts "Hello world"
   end
 end
