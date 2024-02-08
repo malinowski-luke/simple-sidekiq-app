@@ -1,16 +1,22 @@
 ## What
 
-A simple non-rails sidekiq implmantation
+A simple non-rails Sidekiq implementation
 
 ## Run
 
-1. Run Sidekiq
+1. Install dependencies 
+
+```sh
+bundle install
+```
+
+2. Run Sidekiq
 
 ```bash
 bundle exec sidekiq -r ./job.rb
 ```
 
-2. Enter irb console
+3. Enter irb console
 
 ```bash
 bundle exec irb -r ./job.rb
@@ -19,15 +25,15 @@ bundle exec irb -r ./job.rb
 bin/console
 ```
 
-3. Run Job
+4. Run Job
 
 ```rb
 MyJob.perform_async("Hello world")
 ```
 
-4. Run sidekiq Web UI
+5. Run Sidekiq Web UI
 
-defaults to [host](http://localhost:9292)
+defaults to [locahost:9292](http://localhost:9292)
 
 ```bash
 rackup
@@ -35,7 +41,7 @@ rackup
 
 ## Gotcha to run WebUI
 
-Run in irb console
+Run in `bin/console`
 
 ```rb
 require "securerandom"
