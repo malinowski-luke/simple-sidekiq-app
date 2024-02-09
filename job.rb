@@ -16,8 +16,9 @@ end
 
 
 class HelloWorldJob < BaseJob
-  def perform
-    sleep 10  
+  def perform(job_hard=false)
+    sleep_time = job_hard ? 30 : 10
+    sleep sleep_time
     puts "Hello world"
   end
 end
@@ -28,6 +29,5 @@ class FailedJob < BaseJob
   def perform
     sleep 5 
     raise "This job will always fail!"
-    # puts "now it will work"
   end
 end
